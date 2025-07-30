@@ -35,3 +35,8 @@ print(frutas)
 frutas.reverse()#ordena los elementos de la lista en forma descendente
 print(frutas)
 
+#listas de comprension
+#nueva_lista = [expresion for elemento in secuencia if condicion]
+numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]#nuestra lista
+cuadrados = [x ** 2 for x in numeros if x % 2 == 0]#lista de comprension eleva cada elemento de la lista al cuadrado y solo imprime los pares
+print(cuadrados)
