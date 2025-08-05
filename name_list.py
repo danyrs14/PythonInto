@@ -1,15 +1,20 @@
 #Crea una función que acepte un número variable de nombres y los imprima uno por uno.
 
-n = int(input("Ingresa un numero: "))#numero variable de nombres
-m = 0#pivote
+def imprimir_nombres():
+    n = int(input("Ingresa un número: "))  # número de nombres a ingresar
+    m = 0  # pivote
+    lista = []  # lista vacía
 
-lista = []#creamos lista vacia
+    for x in range(n):
+        if x == m:
+            lista.append(str(input("Ingresa un Nombre: ")))  # agregamos nombre
+            m = m + 1
+        else:
+            break
 
-for x in range(n):
-    if x == m:
-        lista.append(str(input("Ingresa un Nombre: ")))#cada iteracion le agregamos un elemento a la lista
-        m = m + 1
-    else:
-        break
+    print("\nNombres ingresados:")
+    for nombre in lista:
+        print(nombre)
 
-#a medias
+# Llamada a la función
+imprimir_nombres()
