@@ -6,3 +6,13 @@ try:
     print(resultado)
 except ZeroDivisionError:
     print("Division by zero")
+except ValueError:
+    print("Error: Valor invalido")
+
+#finally
+try:
+    archivo = open("main.txt", "r")
+except FileNotFoundError:
+    print("Archivo no encontrado")
+finally:
+    archivo.close()
